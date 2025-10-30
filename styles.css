@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: solid;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262b40;
+    --text-color: #fff;
+    --main-color: #f49818;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 3rem;
+    gap: 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header
+{
+    min-height: 20vh;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+header nav img {
+    grid-column: span 2;
+}
+
+header nav ul {
+    grid-column: span 8;
+    display: flex;
+    justify-content: end;
+}
+
+a {
+    color: var(--text-color);
+    transition: all ease 0.3s;
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgb(9, 45, 45);
+}
+
+iframe {
+    grid-column: span 3;
+    width: 100%;
+    height: 100%;
+}
+
+#myself {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: 80vh;
+    background-color: rgb(96, 96, 57);
+}
+
+#myselfDiv {
+    background-color: chocolate;
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#myselfImg {
+    background-color: aqua;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+#myselfImg img {
+    max-height: 250px;
+    height: 100%;
+    border-radius: 50%;
+    border: 20px solid;
+}
+
+#aboutMe {
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+#aboutMeImg {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 2rem 50% 2rem 2rem;
+    width: 30%;
+}
+
+#aboutMeImg img {
+    border-radius: 50%;
+    max-height: 260px;
+    height: 100%;
+    width: auto;
+}
+
+#aboutMeDiv {
+    background-color: coral;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#services {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    grid-row-gap: 2rem;
+}
+
+#services h1 {
+    background-color: crimson;
+    grid-column: span 6;
+    text-align: center;
+    height: fit-content;
+}
+
+#services div {
+    grid-column: span 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background-color: green;
+    height: fit-content;
+}
+
+#myDoing {
+    background-color: rgb(141, 176, 201);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    grid-row-gap: 2rem;
+}
+
+#myDoing h2 {
+    background-color: rgb(220, 117, 20);
+    grid-column: span 6;
+    text-align: center;
+    height: fit-content;
+}
+
+#myDoing img {
+    grid-column: span 2;
+    background-color: green;
+    height: 250px;
+    border-radius: 1.5rem;
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+#contact h2 {
+    grid-column: span 6;
+    text-align: center;
+}
+
+#contact img {
+    grid-column: span 3;
+}
+
+#contact form {
+    grid-column: span 3;
+}
+
+#contact form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 3;
+    gap: 0.5rem;
+}
+
+#contact form fieldset input {
+    grid-column: span 1;
+    font-size: 1rem;
+    padding: 0.75rem;
+    background-color: #262b40;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#contact form fieldset textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    min-height: 40vh;
+    grid-column: span 2;
+    background-color: #262b40;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#contact form footer {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
