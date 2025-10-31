@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: solid;
     list-style: none;
     text-decoration: none;
+    border: solid;
 }
 
 :root {
@@ -17,15 +17,13 @@
 body {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 3rem;
-    gap: 2rem;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
-header
-{
-    min-height: 20vh;
+header {
+    height: 10vh;
+    background-color: var(--bg-color);
 }
 
 header nav {
@@ -41,6 +39,7 @@ header nav ul {
     grid-column: span 8;
     display: flex;
     justify-content: end;
+    gap: 1rem;
 }
 
 a {
@@ -55,8 +54,6 @@ a:hover {
 main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background-color: rgb(9, 45, 45);
 }
 
 iframe {
@@ -68,23 +65,22 @@ iframe {
 #myself {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     min-height: 80vh;
-    background-color: rgb(96, 96, 57);
+    background-color: var(--bg-color);
 }
 
 #myselfDiv {
-    background-color: chocolate;
     width: 60%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1rem;
 }
 
 #myselfImg {
-    background-color: aqua;
-    width: 40%;
     display: flex;
     justify-content: center;
 }
@@ -97,23 +93,21 @@ iframe {
 }
 
 #aboutMe {
-    background-color: bisque;
+    background-color: var(--snd-bg-color);
     display: flex;
     align-items: center;
     min-height: 80vh;
-
     flex-direction: row-reverse;
     gap: 2rem;
 }
 
 #aboutMeImg {
-    height: 400px;
+    padding: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
-    border-radius: 2rem 50% 2rem 2rem;
-    width: 30%;
+    border-radius: 2rem 50% 0rem 0rem;
 }
 
 #aboutMeImg img {
@@ -124,42 +118,51 @@ iframe {
 }
 
 #aboutMeDiv {
-    background-color: coral;
     width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1rem;
 }
 
 #services {
-    background-color: black;
+    min-height: 80vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+#services div
+{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto;
     gap: 1rem;
     grid-row-gap: 2rem;
 }
 
 #services h1 {
-    background-color: crimson;
     grid-column: span 6;
     text-align: center;
     height: fit-content;
 }
 
-#services div {
+#services div div{
     grid-column: span 2;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding: 1.5rem;
-    background-color: green;
+    background-color: var(--snd-bg-color);
     height: fit-content;
+    border-radius: 2rem;
 }
 
 #myDoing {
-    background-color: rgb(141, 176, 201);
+    background-color: var(--snd-bg-color);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto 1fr;
@@ -168,7 +171,6 @@ iframe {
 }
 
 #myDoing h2 {
-    background-color: rgb(220, 117, 20);
     grid-column: span 6;
     text-align: center;
     height: fit-content;
