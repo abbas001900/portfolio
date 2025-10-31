@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <img src="" alt="Portfolio">
+            <a id="logo">Portfolio.</a>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -54,26 +54,26 @@
             <div id="aboutMeImg"><img src="./images/img_dev_junior.jpg" alt=""></div>
         </section>
         <section id="services">
-            <h1>My Services</h1>
-            <div>
-                <div>
-                    <i></i>
+            <h1>My <span>Services</span></h1>
+            <div id="container">
+                <div class="servicesDiv">
+                    <img src="./images/icons8-code-50.png" alt="code">
                     <h2>Web Development</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
                         adipisci tempore beatae at tenetur!</p>
                     <a href="#">Read More</a>
                 </div>
-                <div>
-                    <i></i>
+                <div class="servicesDiv">
+                    <img src="./images/icons8-paint-palette-24.png" alt="paint palette">
                     <h2>UI/UX Designing</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
                         adipisci tempore beatae at tenetur!</p>
                     <a href="#">Read More</a>
                 </div>
-                <div>
-                    <i></i>
+                <div class="servicesDiv">
+                    <img src="./images/icons8-android-48.png" alt="android">
                     <h2>App Development</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
@@ -84,12 +84,18 @@
         </section>
         <section id="myDoing">
             <h2>Latest <span>Projects</span></h2>
-            <img src="" alt="Projects">
-            <img src="" alt="Projects">
-            <img src="" alt="Projects">
-            <img src="" alt="Projects">
-            <img src="" alt="Projects">
-            <img src="" alt="Projects">
+            <section>
+                <div class="myDoingImg myDoingImgTop">
+                    <img src="./images/developpeur-de-logiciels-travaillant-sur-une-nouvelle-interface-utilisateur-avec-un-systeme-en-ligne-pour-creer-un-algorithme-dans-le-bureau-de-l-agence-ingenieur-systeme-programmant-un-algorithme-de-code-html-sur-ordinateur-tapant-des-donn.jpg" alt="Projects">
+                    <img src="./images/developpeur-de-logiciels-utilisant-l-application-de-fenetre-de-terminal-sur-un-ordinateur-portable-apprenant-a-coder-un-nouveau-programme-d-interface-utilisateur-developpement-d-un-serveur-en-ligne-de-cloud-computing-avec-securite-pare-feu-.jpg" alt="Projects">
+                    <img src="./images/programmeur-numerisant-l-ecran-de-sa-smartwatch-avec-l-appareil-photo-d-un-smartphone.jpg" alt="Projects">
+                </div>
+                <div class="myDoingImg myDoingImgBottom">
+                    <img src="./images/programmeur-professionnel-travaillant-tard-dans-l-obscurite-du-bureau.jpg" alt="Projects">
+                    <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg" alt="Projects">
+                    <img src="./images/vue-de-dessus-d-un-pirate-informatique-non-reconnaissable-effectuant-une-cyberattaque-la-nuit.jpg" alt="Projects">
+                </div>
+            </section>
         </section>
         <section id="contact">
             <h2>Contact <span>Me!</span></h2>
