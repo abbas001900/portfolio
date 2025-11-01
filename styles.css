@@ -1,12 +1,25 @@
+/* Defintions des proprietes par defaut */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: solid; */
     list-style: none;
     text-decoration: none;
-    border: solid;
+    color: var(--text-color);
 }
 
+a {
+    width: 10rem;
+    text-align: center;
+    padding: 0.25rem;
+    color: var(--bg-color);
+    border-radius: 1.5rem;
+    background-color: var(--main-color);
+    box-shadow: 0 0 2px 3px var(--main-color);
+}
+
+/* Definition de la palette de couleur principale */
 :root {
     --bg-color: #191f36;
     --snd-bg-color: #262b40;
@@ -14,344 +27,438 @@
     --main-color: #f49818;
 }
 
+/* ------------------------------------------------------------ */
+
+/* Style de la page */
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-header {
-    width: 100%;
-    min-height: 120vh;
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 1rem 6rem;
+    align-items: center;
+    min-height: 100vh;
 }
 
-header nav {
-    width: 100%;
+/* ------------------------------------------------------------ */
+
+/* Style du header */
+header {
     position: fixed;
     top: 0;
-    display: flex;
+    width: 100%;
+    height: 10vh;
+    padding: 1rem 0;
     background-color: var(--bg-color);
-    justify-content: space-between;
-    padding: 0.5rem 6rem;
-}
-
-header nav img {
-    grid-column: span 2;
-}
-
-header nav ul {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    z-index: 9999;
 }
-
-a {
+header a
+{
+    background-color: transparent;
     color: var(--text-color);
-    transition: all ease 0.3s;
+    border-radius: 0;
+    width: auto;
+    box-shadow: none;
+    transition: all 0.3s ease;
 }
-
-a:hover {
+header a:hover {
     color: var(--main-color);
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-iframe {
-    width: 50%;
-    height: 100%;
-    border-radius: 0.5rem;
-}
-
-#pageFooter
-{
-    background-color: var(--snd-bg-color);
+/* Style de la bare de navigation du header */
+header nav {
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    background-color: transparent;
 }
 
 #logo
 {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
 }
 
+/* Style de la liste du header */
+ul {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Stylisation du main */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Premiere section presentation du personnage */
 #myself {
+    padding: 2rem;
+    width: 100%;
     display: flex;
     flex-wrap: wrap-reverse;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
     min-height: 100vh;
     background-color: var(--bg-color);
+    gap: 2rem;
 }
 
+/* Style de la partie contenant la presentation du personnage */
+#myselfDiv {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Style de la partie contenant l'image de la presentation */
+#myselfImg
+{
+    min-width: 300px;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2rem solid #F9F4F4;
+    animation: float 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* animation image flottante */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+#myselfImg img
+{
+    width: 100%;
+} 
+
+/* Style des icones resaux sociaux */
 #myselfIcons
 {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    height: fit-content;
+    gap: 0.5rem;
 }
 #myselfIcons i
 {
-    width: 2rem;
-    height: 2rem;
-    padding: 0.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 2.1rem;
+    width: 2.1rem;
+    padding: 0.35rem;
+    border-radius: 50%;
     border: 1px solid var(--main-color);
-    border-radius: 50%;
 }
-
-#myselfDiv {
-    height: fit-content;
-    max-width: 60%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#myselfImg {
-    display: flex;
-    justify-content: center;
-}
-
-#myselfImg img {
-    max-height: 250px;
-    height: 100%;
-    border-radius: 50%;
-    border: 20px solid #C4B092;
-}
-
-#aboutMe {
-    background-color: var(--snd-bg-color);
-    display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    flex-direction: row-reverse;
-    gap: 2rem;
-    padding: 6rem;
-}
-
-#aboutMeImg {
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #C4B092;
-    border-radius: 2rem 50% 0rem 0rem;
-}
-
-#aboutMeImg img {
-    border-radius: 50%;
-    max-height: 260px;
-    height: 100%;
-    width: auto;
-}
-
-#aboutMeDiv {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#services {
-    min-height: 100vh;
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 6rem;
-}
-#container
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
-    grid-template-rows: auto auto;
-    gap: 1rem;
-    grid-row-gap: 2rem;
-}
-
-#services h1 {
-    grid-column: span 6;
-    text-align: center;
-    height: fit-content;
-}
-
-.servicesDiv{
-    grid-column: span 2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background-color: var(--snd-bg-color);
-    height: fit-content;
-    border-radius: 2rem;
-}
-.servicesDiv img
-{
-    width: 4rem;
-    height: auto;
-}
-
-
-#myDoing {
-    min-height: 100vh;
-    background-color: var(--snd-bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-}
-
-#myDoing section
-{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#myDoing h2 {
-    text-align: center;
-    height: fit-content;
-}
-
-.myDoingImg {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
-.myDoingImg img
-{
-    width: 350px;
-    height: 250px;
-    border-radius: 2rem;
-}
-.orangeButton
-{
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    box-shadow: 0px 0px 3px 4px var(--main-color);
-    max-width: 10rem;
-    text-align: center;
-    width: 100%;
-    padding: 0.3rem;
-    border-radius: 1rem;
-    border: none;
-    font-weight: bold;
-}
-
 .myselfIcon
 {
     width: 100%;
+    height: 100%;
 }
 
-#contact {
+/* Style de la section About me */
+#aboutMe
+{
+    padding: 2rem;
+    width: 100%;
     min-height: 100vh;
+    background-color: var(--snd-bg-color);
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 6rem;
 }
 
-#contactHeader
+/* Style du texte dans about me */
+#aboutMeDiv
 {
-    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 60vw;
+}
+
+/* Style de l'image dans About me */
+#aboutMeImg
+{
+    min-width: 300px;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem 50% 0 0;
+    padding: 2rem;
+    background-color: #F9F4F4;
+}
+#aboutMeImg img
+{
     width: 100%;
-    max-height: 10vh;
-    display: block;
-    padding: 0;
+    border-radius: 50%;
+}
+
+/* Style de la section services */
+#services
+{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+#container
+{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Style des differents services dans leurs divs */
+.servicesDiv
+{
+    min-width: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--snd-bg-color);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+.servicesDiv:hover
+{
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 1px 1px var(--main-color);
+    transform: scale(1.02);
+}
+
+/* Styles des images dans les services */
+.servicesDiv img
+{
+    width: 4rem;
+}
+
+/* Style de la section des realisations */
+#myDoing
+{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--snd-bg-color);
+    width: 100%;
+    min-height: 100vh;
     text-align: center;
 }
+#myDoing section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+}
 
+/* Style des images des differentes realisations */
+.myDoingImg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.myDoingImg
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.myDoingImg img
+{
+    min-width: 300px;
+    width: 25vw;
+    max-height: 40vh;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+/* Style de la section des contacts */
+#contact
+{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* style de la section contenant le formulaire et la localisation */
 #contactSection
 {
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 90%;
     gap: 1rem;
 }
 
-#contactSection form {
-    width: 50%;
+/* Style du formulaire */
+#contactSection form
+{
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-}
-
-#inputs {
-    display: flex;
-    flex-direction: column;
-    border: none;
+    align-items: center;
     gap: 0.5rem;
+    height: 60vh;
 }
-.inInput
+#inputs
 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
     border: none;
+}
+
+.inInput
+{
+    border: none;
+    display: flex;
     gap: 0.5rem;
     width: 100%;
 }
 
-.inInput input {
-    width: 50%;
+.inInput input
+{
+    flex: 1;
     font-size: 1rem;
-    padding: 0.75rem;
-    background-color: #262b40;
+    background-color: var(--snd-bg-color);
     border-radius: 0.5rem;
+    padding: 0.5rem;
     border: none;
 }
 
-#inputs textarea {
-    padding: 0.75rem;
+textarea
+{
+    height: 100%;
+    background-color: var(--snd-bg-color);
     font-size: 1rem;
-    min-height: 40vh;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+/* Style de la localisation */
+iframe
+{
+    flex: 1;
+    height: 60vh;
+}
+
+/* Style du bouton du formulaire */
+button
+{
+    margin-top: 1rem;
+    width: 10rem;
+    text-align: center;
+    padding: 0.25rem;
+    color: var(--bg-color);
+    border-radius: 1.5rem;
+    background-color: var(--main-color);
+    box-shadow: 0 0 2px 3px var(--main-color);
+    border: none;
+}
+/* ----------------------------------------------------------- */
+
+/* Style du footer */
+footer
+{
+    background-color: var(--snd-bg-color);
     width: 100%;
-    background-color: #262b40;
-    border: none;
-    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
 }
 
-#contactSection form footer {
+footer a
+{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
-    background-color: transparent;
+    align-items: center;
 }
 
-@media (max-width:1024px) {
-    
+@media (max-width: 989px) {
+    #myself
+    {
+        padding-top: 20vh;
+    }
+    #myselfDiv
+    {
+        align-items: center;
+        text-align: center;
+    }
+
+    #aboutMeDiv
+    {
+        align-items: center;
+        text-align: center;
+    }
+
 }
