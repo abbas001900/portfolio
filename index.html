@@ -9,19 +9,22 @@
 </head>
 
 <body>
+    <!-- header du portfolio -->
     <header>
         <nav>
-            <a id="logo">Portfolio.</a>
+            <a href="#logo" id="logo">Portfolio.</a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#myself">Home</a></li>
+                <li><a href="#aboutMe">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#myDoing">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <!-- contenu principale -->
     <main>
+        <!-- Premiere section presentation du personnage -->
         <section id="myself">
             <div id="myselfDiv">
                 <h3>Hi, Abbas</h3>
@@ -29,30 +32,36 @@
                 <h3>And I'm a</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias illo inventore repellat eius
                     tempora animi optio quaerat et dignissimos eveniet maxime, cum iure, possimus eum qui expedita, unde
-                    itaque vel!</p>
-                <div>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                    itaque vel! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis aliquam
+                    debitis, totam ipsa fuga eos harum commodi consectetur, dolorem maiores ipsam aspernatur sint
+                    laborum, eum recusandae! Ratione, nemo eveniet.</p>
+                <div id="myselfIcons">
+                    <i><img src="./images/icons8-facebook-50.png" alt="facebook" class="myselfIcon"></i>
+                    <i><img src="./images/icons8-twitter-24.png" alt="twitter" class="myselfIcon"></i>
+                    <i><img src="./images/icons8-instagram-24.png" alt="instagram" class="myselfIcon"></i>
+                    <i><img src="./images/icons8-linkedin-30.png" alt="linkedin" class="myselfIcon"></i>
                 </div>
-                <a href="#">Download CV</a>
+                <a href="#" class="orangeButton">Download CV</a>
             </div>
             <div id="myselfImg">
                 <img src="./images/img_dev_junior.jpg" alt="">
             </div>
         </section>
+        <!-- Deuxieme section About me -->
         <section id="aboutMe">
             <div id="aboutMeDiv">
                 <h1>About Me</h1>
                 <h3>Frontend Developer</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias illo inventore repellat eius
                     tempora animi optio quaerat et dignissimos eveniet maxime, cum iure, possimus eum qui expedita, unde
-                    itaque vel!</p>
-                <a href="#">Read More</a>
+                    itaque vel! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda illum impedit quia
+                    perferendis reiciendis, pariatur iste aut, quod laborum inventore minima odio, dolor distinctio odit
+                    voluptatum veniam molestiae architecto voluptate.</p>
+                <a href="#" class="orangeButton">Read More</a>
             </div>
             <div id="aboutMeImg"><img src="./images/img_dev_junior.jpg" alt=""></div>
         </section>
+        <!-- Troisieme section, les services offerts -->
         <section id="services">
             <h1>My <span>Services</span></h1>
             <div id="container">
@@ -62,7 +71,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
                         adipisci tempore beatae at tenetur!</p>
-                    <a href="#">Read More</a>
+                    <a href="#" class="orangeButton">Read More</a>
                 </div>
                 <div class="servicesDiv">
                     <img src="./images/icons8-paint-palette-24.png" alt="paint palette">
@@ -70,7 +79,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
                         adipisci tempore beatae at tenetur!</p>
-                    <a href="#">Read More</a>
+                    <a href="#" class="orangeButton">Read More</a>
                 </div>
                 <div class="servicesDiv">
                     <img src="./images/icons8-android-48.png" alt="android">
@@ -78,48 +87,65 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
                         adipisci tempore beatae at tenetur!</p>
-                    <a href="#">Read More</a>
+                    <a href="#" class="orangeButton">Read More</a>
                 </div>
             </div>
         </section>
+
+        <!-- Quatrieme section les realisations  -->
         <section id="myDoing">
             <h2>Latest <span>Projects</span></h2>
             <section>
                 <div class="myDoingImg myDoingImgTop">
-                    <img src="./images/developpeur-de-logiciels-travaillant-sur-une-nouvelle-interface-utilisateur-avec-un-systeme-en-ligne-pour-creer-un-algorithme-dans-le-bureau-de-l-agence-ingenieur-systeme-programmant-un-algorithme-de-code-html-sur-ordinateur-tapant-des-donn.jpg" alt="Projects">
-                    <img src="./images/developpeur-de-logiciels-utilisant-l-application-de-fenetre-de-terminal-sur-un-ordinateur-portable-apprenant-a-coder-un-nouveau-programme-d-interface-utilisateur-developpement-d-un-serveur-en-ligne-de-cloud-computing-avec-securite-pare-feu-.jpg" alt="Projects">
-                    <img src="./images/programmeur-numerisant-l-ecran-de-sa-smartwatch-avec-l-appareil-photo-d-un-smartphone.jpg" alt="Projects">
+                    <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg"
+                        alt="Projects">
+                    <img src="./images/programmeur-professionnel-travaillant-tard-dans-l-obscurite-du-bureau.jpg"
+                        alt="Projects">
+                    <img src="./images/programmeur-numerisant-l-ecran-de-sa-smartwatch-avec-l-appareil-photo-d-un-smartphone.jpg"
+                        alt="Projects">
                 </div>
                 <div class="myDoingImg myDoingImgBottom">
-                    <img src="./images/programmeur-professionnel-travaillant-tard-dans-l-obscurite-du-bureau.jpg" alt="Projects">
-                    <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg" alt="Projects">
-                    <img src="./images/vue-de-dessus-d-un-pirate-informatique-non-reconnaissable-effectuant-une-cyberattaque-la-nuit.jpg" alt="Projects">
+                    <img src="./images/programmeur-professionnel-travaillant-tard-dans-l-obscurite-du-bureau.jpg"
+                        alt="Projects">
+                    <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg"
+                        alt="Projects">
+                    <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg"
+                        alt="Projects">
                 </div>
             </section>
         </section>
+
+        <!-- Cinquieme section Contacts -->
         <section id="contact">
             <h2>Contact <span>Me!</span></h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.8901813882417!2d2.2737297763135507!3d13.232207887107592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11d0170febd4fb01%3A0x82f4b27e584aec05!2sCODELOCCOL!5e0!3m2!1sfr!2sne!4v1761852016997!5m2!1sfr!2sne"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <form action="#">
-                <fieldset>
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Email Address">
-                    <input type="text" placeholder="Mobile Number">
-                    <input type="text" placeholder="Email">
-                    <textarea name="comment" placeholder="Your Message"></textarea>
-                </fieldset>
-                <footer>
-                    <button type="submit">Send Message</button>
-                </footer>
-            </form>
+            <section id="contactSection">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.8901813882417!2d2.2737297763135507!3d13.232207887107592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11d0170febd4fb01%3A0x82f4b27e584aec05!2sCODELOCCOL!5e0!3m2!1sfr!2sne!4v1761852016997!5m2!1sfr!2sne"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <form action="#">
+                    <fieldset id="inputs">
+                        <fieldset class="inInput">
+                            <input type="text" placeholder="Full Name">
+                            <input type="text" placeholder="Email Address">
+                        </fieldset>
+                        <fieldset class="inInput">
+                            <input type="text" placeholder="Mobile Number">
+                            <input type="text" placeholder="Email">
+                        </fieldset>
+                        <textarea name="comment" placeholder="Your Message"></textarea>
+                    </fieldset>
+                    <section>
+                        <button type="submit" class="orangeButton">Send Message</button>
+                    </section>
+                </form>
+            </section>
         </section>
     </main>
-    <footer>
+    <!-- Footer du portfolio -->
+    <footer id="pageFooter">
         <p>Copyright</p>
-        <a href="#"><i>icon</i></a>
+        <a href="#"><i>H</i></a>
     </footer>
 </body>
 
