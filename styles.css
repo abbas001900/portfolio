@@ -1,4 +1,6 @@
 /* Defintions des proprietes par defaut */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -19,12 +21,17 @@ a {
     box-shadow: 0 0 2px 3px var(--main-color);
 }
 
+i {
+    color: var(--bg-color);
+}
+
 /* Definition de la palette de couleur principale */
 :root {
     --bg-color: #191f36;
     --snd-bg-color: #262b40;
     --text-color: #fff;
     --main-color: #f49818;
+    --burger-size: 30px;
 }
 
 /* ------------------------------------------------------------ */
@@ -37,6 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: Nunito;
 }
 
 /* ------------------------------------------------------------ */
@@ -73,6 +81,29 @@ header nav {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
+}
+
+.burger-menu {
+    display: none; /* Masqué par défaut (Desktop) */
+    flex-direction: column;
+    justify-content: space-around;
+    width: var(--burger-size);
+    height: var(--burger-size);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--text-color);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+#burger-toggle {
+    display: none;
 }
 
 #logo
@@ -316,9 +347,78 @@ main {
     align-items: center;
     gap: 1rem;
 }
-
-.myDoingImg img
+.imgMyDoing
 {
+    position: relative; /* Clé pour le positionnement absolu */
+    overflow: hidden; /* Cache tout ce qui dépasse, y compris l'overlay hors champ */
+    cursor: pointer; /* Indique qu'on peut interagir */
+}
+
+.imgMyDoing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Couleur du dégradé de l'overlay (adapté à votre couleur principale) */
+    background: linear-gradient(
+        to bottom, 
+        rgba(244, 152, 24, 0.13), /* Orange semi-transparent */
+        rgba(244, 152, 24, 0.8)  /* Orange plus opaque en bas */
+    );
+    
+    /* L'astuce : Le faire monter ou le masquer */
+    /* Masqué par défaut (par exemple, transformé en bas) */
+    transform: translateY(100%); 
+    
+    /* Animation de transition */
+    transition: transform 0.4s ease; 
+    z-index: 5; /* Assure qu'il est au-dessus de l'image */
+}
+
+.overlay-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    color: white; /* Texte en blanc sur l'overlay sombre/coloré */
+    z-index: 10;
+    
+    /* Masquer le contenu par défaut (par exemple en le déplaçant légèrement) */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.overlay-content h3 {
+    font-size: 2.2rem;
+    color: white; /* Assurez-vous que les titres sont blancs */
+}
+
+.overlay-content p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.imgMyDoing:hover::before {
+    /* Fait remonter l'overlay pour le rendre visible */
+    transform: translateY(0); 
+}
+
+.imgMyDoing:hover .overlay-content {
+    /* Rend le contenu visible et le replace */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imgMyDoing img
+{
+    display: block;
     min-width: 300px;
     width: 25vw;
     max-height: 40vh;
@@ -344,7 +444,7 @@ main {
 #contactSection
 {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 90%;
@@ -376,6 +476,7 @@ main {
 {
     border: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     width: 100%;
 }
@@ -459,6 +560,65 @@ footer a
     {
         align-items: center;
         text-align: center;
+    }
+
+    .burger-menu {
+        display: flex; 
+    }
+
+    /* 2. Cacher les liens par défaut et les positionner pour le mobile */
+    ul {
+        /* Positionnement du menu hors écran */
+        position: absolute;
+        top: 60px; /* Commence juste sous la navbar */
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--background-light);
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%); /* Masqué à gauche */
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding-top: 20px;
+    }
+
+   ul a {
+        padding: 15px 0;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    /* 3. L'astuce magique CSS Only : Rendre le menu visible */
+    /* Lorsque la case à cocher est cochée, sélectionne l'élément .nav-links */
+    #burger-toggle:checked ~ ul {
+        transform: translateX(0); /* Rendre visible */
+    }
+
+    /* 4. L'astuce magique CSS Only : Animation de la croix */
+    /* Ligne du haut (rotation et translation) */
+    #burger-toggle:checked ~ .burger-menu span:nth-child(1) {
+        transform: translateY(13.5px) rotate(45deg);
+    }
+    /* Ligne du milieu (masquée) */
+    #burger-toggle:checked ~ .burger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+    /* Ligne du bas (rotation et translation inverse) */
+    #burger-toggle:checked ~ .burger-menu span:nth-child(3) {
+        transform: translateY(-13.5px) rotate(-45deg);
+    }
+
+    .imgMyDoing:hover::before {
+        /* Masquer l'overlay même si un "hover" ou "active" est détecté */
+        transform: translateY(100%); 
+    }
+
+    .imgMyDoing:hover .overlay-content {
+        /* Masquer le contenu de l'overlay */
+        opacity: 0;
+        transform: translateY(20px);
     }
 
 }
