@@ -8,21 +8,6 @@
     /* border: solid; */
     list-style: none;
     text-decoration: none;
-    color: var(--text-color);
-}
-
-a {
-    width: 10rem;
-    text-align: center;
-    padding: 0.25rem;
-    color: var(--bg-color);
-    border-radius: 1.5rem;
-    background-color: var(--main-color);
-    box-shadow: 0 0 2px 3px var(--main-color);
-}
-
-i {
-    color: var(--bg-color);
 }
 
 /* Definition de la palette de couleur principale */
@@ -45,6 +30,56 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: Nunito;
+    color: var(--text-color);
+}
+ label {
+    display: none;
+ }
+
+ label i {
+    font-size: 2rem;
+ }
+
+ #menu-toggle {
+    display: none;
+ }
+
+.orangeButton {
+    padding: 0.5rem;
+    width: 12rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 700;
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 3px 3px var(--main-color);
+    transition: all 1.2s ease;
+}
+
+.orangeButton:hover {
+    box-shadow: none;
+}
+
+h1 {
+    font-size: clamp(2.6rem, 10vw, 5.6rem);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 5.2vw, 3.2rem);
+}
+
+p {
+    font-size: clamp(1rem, 2.2vw, 1.6rem);
+}
+
+.orangeColor {
+    color: var(--main-color);
+}
+
+.salutations {
+    font-size: clamp(1.2rem, 2.2vw, 2.6rem);
+    font-weight: 700;
 }
 
 /* ------------------------------------------------------------ */
@@ -58,63 +93,46 @@ header {
     padding: 1rem 0;
     background-color: var(--bg-color);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 4rem;
     z-index: 9999;
 }
-header a
-{
+
+header a {
     background-color: transparent;
     color: var(--text-color);
     border-radius: 0;
     width: auto;
     box-shadow: none;
     transition: all 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
+
 header a:hover {
     color: var(--main-color);
 }
 
-/* Style de la bare de navigation du header */
 header nav {
-    width: 90%;
     display: flex;
-    justify-content: space-between;
-    background-color: transparent;
+    justify-content: center;
 }
 
-.burger-menu {
-    display: none; /* Masqué par défaut (Desktop) */
-    flex-direction: column;
-    justify-content: space-around;
-    width: var(--burger-size);
-    height: var(--burger-size);
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.burger-menu span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: var(--text-color);
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
-#burger-toggle {
+.menu-checkbox {
     display: none;
 }
 
-#logo
-{
-    font-size: 1.5rem;
+#logo {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
+
+/* Style de la bare de navigation du header */
 
 /* Style de la liste du header */
 ul {
     display: flex;
-    gap: 0.75rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -152,8 +170,7 @@ main {
 }
 
 /* Style de la partie contenant l'image de la presentation */
-#myselfImg
-{
+#myselfImg {
     min-width: 300px;
     width: 25vw;
     display: flex;
@@ -171,46 +188,46 @@ main {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5vh);
     }
+
     100% {
         transform: translateY(0);
     }
 }
-#myselfImg img
-{
+
+#myselfImg img {
     width: 100%;
-} 
+}
 
 /* Style des icones resaux sociaux */
-#myselfIcons
-{
+#myselfIcons {
     display: flex;
     align-items: center;
     height: fit-content;
     gap: 0.5rem;
 }
-#myselfIcons i
-{
+
+#myselfIcons i {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2.1rem;
-    width: 2.1rem;
+    height: 2rem;
+    width: 2rem;
     padding: 0.35rem;
     border-radius: 50%;
     border: 1px solid var(--main-color);
 }
-.myselfIcon
-{
+
+.myselfIcon {
     width: 100%;
     height: 100%;
 }
 
 /* Style de la section About me */
-#aboutMe
-{
+#aboutMe {
     padding: 2rem;
     width: 100%;
     min-height: 100vh;
@@ -224,8 +241,7 @@ main {
 }
 
 /* Style du texte dans about me */
-#aboutMeDiv
-{
+#aboutMeDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,8 +250,7 @@ main {
 }
 
 /* Style de l'image dans About me */
-#aboutMeImg
-{
+#aboutMeImg {
     min-width: 300px;
     width: 25vw;
     display: flex;
@@ -245,15 +260,14 @@ main {
     padding: 2rem;
     background-color: #F9F4F4;
 }
-#aboutMeImg img
-{
+
+#aboutMeImg img {
     width: 100%;
     border-radius: 50%;
 }
 
 /* Style de la section services */
-#services
-{
+#services {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -265,8 +279,7 @@ main {
     min-height: 100vh;
 }
 
-#container
-{
+#container {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -276,8 +289,7 @@ main {
 }
 
 /* Style des differents services dans leurs divs */
-.servicesDiv
-{
+.servicesDiv {
     min-width: 300px;
     flex: 1;
     display: flex;
@@ -292,23 +304,22 @@ main {
     transition: all 0.5s ease;
     z-index: 1;
 }
-.servicesDiv:hover
-{
+
+.servicesDiv:hover {
     border: 1px solid var(--main-color);
     box-shadow: 0 0 1px 1px var(--main-color);
     transform: scale(1.02);
 }
 
 /* Styles des images dans les services */
-.servicesDiv img
-{
-    width: 4rem;
+.servicesDiv img {
+    width: 7rem;
+    height: 7rem;
 }
 
 /* Style de la section des realisations */
-#myDoing
-{
-    padding: 2rem;
+#myDoing {
+    padding: 7rem 0.5rem 1rem 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -319,116 +330,78 @@ main {
     min-height: 100vh;
     text-align: center;
 }
-#myDoing section
-{
+
+#imgMyDoing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Style des images des differentes realisations */
+.imgMyDoing {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    width: 90%;
+    width: 24rem;
+    height: 20rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border-radius: 1.5rem;
 }
 
-/* Style des images des differentes realisations */
-.myDoingImg
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
+.imageDoing {
+    width: 25rem;
+    height: 20rem;
+    transition: all 0.5s ease;
 }
 
-.myDoingImg
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-.imgMyDoing
-{
-    position: relative; /* Clé pour le positionnement absolu */
-    overflow: hidden; /* Cache tout ce qui dépasse, y compris l'overlay hors champ */
-    cursor: pointer; /* Indique qu'on peut interagir */
+.linkImage {
+    width: 2rem;
+    padding: 0.2rem;
+    border-radius: 50%;
+    background-color: var(--text-color);
 }
 
-.imgMyDoing::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* Couleur du dégradé de l'overlay (adapté à votre couleur principale) */
-    background: linear-gradient(
-        to bottom, 
-        rgba(244, 152, 24, 0.13), /* Orange semi-transparent */
-        rgba(244, 152, 24, 0.8)  /* Orange plus opaque en bas */
-    );
-    
-    /* L'astuce : Le faire monter ou le masquer */
-    /* Masqué par défaut (par exemple, transformé en bas) */
-    transform: translateY(100%); 
-    
-    /* Animation de transition */
-    transition: transform 0.4s ease; 
-    z-index: 5; /* Assure qu'il est au-dessus de l'image */
-}
-
-.overlay-content {
+.overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    padding: 1.5rem;
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     text-align: center;
-    color: white; /* Texte en blanc sur l'overlay sombre/coloré */
-    z-index: 10;
-    
-    /* Masquer le contenu par défaut (par exemple en le déplaçant légèrement) */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.overlay-content h3 {
-    font-size: 2.2rem;
-    color: white; /* Assurez-vous que les titres sont blancs */
-}
-
-.overlay-content p {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: white;
-}
-
-.imgMyDoing:hover::before {
-    /* Fait remonter l'overlay pour le rendre visible */
-    transform: translateY(0); 
-}
-
-.imgMyDoing:hover .overlay-content {
-    /* Rend le contenu visible et le replace */
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.imgMyDoing img
-{
-    display: block;
-    min-width: 300px;
-    width: 25vw;
-    max-height: 40vh;
     height: 100%;
-    border-radius: 2rem;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+    padding: 2rem 1.5rem;
+}
+
+.overlay p {
+    font-size: 1rem;
+}
+
+.imgMyDoing:hover .overlay {
+    background: linear-gradient(to top, var(--main-color), transparent);
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.imgMyDoing:hover img {
+    transform: scale(1.1);
 }
 
 /* Style de la section des contacts */
-#contact
-{
+#contact {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -441,19 +414,17 @@ main {
 }
 
 /* style de la section contenant le formulaire et la localisation */
-#contactSection
-{
+#contactSection {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     gap: 1rem;
 }
 
 /* Style du formulaire */
-#contactSection form
-{
+#contactSection form {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -462,8 +433,8 @@ main {
     gap: 0.5rem;
     height: 60vh;
 }
-#inputs
-{
+
+#inputs {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -472,8 +443,7 @@ main {
     border: none;
 }
 
-.inInput
-{
+.inInput {
     border: none;
     display: flex;
     flex-wrap: wrap;
@@ -481,8 +451,7 @@ main {
     width: 100%;
 }
 
-.inInput input
-{
+.inInput input {
     flex: 1;
     font-size: 1rem;
     background-color: var(--snd-bg-color);
@@ -491,8 +460,7 @@ main {
     border: none;
 }
 
-textarea
-{
+textarea {
     height: 100%;
     background-color: var(--snd-bg-color);
     font-size: 1rem;
@@ -502,15 +470,14 @@ textarea
 }
 
 /* Style de la localisation */
-iframe
-{
+iframe {
     flex: 1;
     height: 60vh;
+    border-radius: 2rem;
 }
 
 /* Style du bouton du formulaire */
-button
-{
+button {
     margin-top: 1rem;
     width: 10rem;
     text-align: center;
@@ -520,12 +487,13 @@ button
     background-color: var(--main-color);
     box-shadow: 0 0 2px 3px var(--main-color);
     border: none;
+    font-weight: 700;
 }
+
 /* ----------------------------------------------------------- */
 
 /* Style du footer */
-footer
-{
+footer {
     background-color: var(--snd-bg-color);
     width: 100%;
     display: flex;
@@ -534,91 +502,69 @@ footer
     align-items: center;
 }
 
-footer a
-{
-    width: 2rem;
-    height: 2rem;
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 0.2rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--main-color);
 }
 
+footer i {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
 @media (max-width: 989px) {
-    #myself
-    {
+    #myself {
         padding-top: 20vh;
     }
-    #myselfDiv
-    {
+
+    #myselfDiv {
         align-items: center;
         text-align: center;
     }
 
-    #aboutMeDiv
-    {
+    #aboutMeDiv {
         align-items: center;
         text-align: center;
     }
 
-    .burger-menu {
-        display: flex; 
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem
     }
 
-    /* 2. Cacher les liens par défaut et les positionner pour le mobile */
     ul {
-        /* Positionnement du menu hors écran */
-        position: absolute;
-        top: 60px; /* Commence juste sous la navbar */
+        display: none;
+        position: fixed;
+        top: 0;
         left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--background-light);
+        /* z-index: 1000; */
+        transform: translateY(30%);
         flex-direction: column;
-        align-items: center;
-        transform: translateX(-100%); /* Masqué à gauche */
-        transition: transform 0.3s ease-in-out;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        padding-top: 20px;
-    }
-
-   ul a {
-        padding: 15px 0;
-        width: 80%;
+        background: var(--bg-color);
+        width: 100%;
+        justify-self: center;
         text-align: center;
-        border-bottom: 1px solid #ddd;
-    }
-    
-    /* 3. L'astuce magique CSS Only : Rendre le menu visible */
-    /* Lorsque la case à cocher est cochée, sélectionne l'élément .nav-links */
-    #burger-toggle:checked ~ ul {
-        transform: translateX(0); /* Rendre visible */
     }
 
-    /* 4. L'astuce magique CSS Only : Animation de la croix */
-    /* Ligne du haut (rotation et translation) */
-    #burger-toggle:checked ~ .burger-menu span:nth-child(1) {
-        transform: translateY(13.5px) rotate(45deg);
-    }
-    /* Ligne du milieu (masquée) */
-    #burger-toggle:checked ~ .burger-menu span:nth-child(2) {
-        opacity: 0;
-    }
-    /* Ligne du bas (rotation et translation inverse) */
-    #burger-toggle:checked ~ .burger-menu span:nth-child(3) {
-        transform: translateY(-13.5px) rotate(-45deg);
+    label {
+        display: block;
     }
 
-    .imgMyDoing:hover::before {
-        /* Masquer l'overlay même si un "hover" ou "active" est détecté */
-        transform: translateY(100%); 
+    #menu-toggle:checked~ ul {
+        display: block;
     }
-
-    .imgMyDoing:hover .overlay-content {
-        /* Masquer le contenu de l'overlay */
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
 }

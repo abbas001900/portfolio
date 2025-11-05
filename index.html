@@ -10,24 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <title>Portfolio</title>
 </head>
 
 <body>
     <!-- header du portfolio -->
     <header>
+        <a href="#logo" id="logo">Portfolio.</a>
         <nav>
-            <a href="#logo" id="logo">Portfolio.</a>
-
-            <input type="checkbox" id="burger-toggle">
-
-            <label for="burger-toggle" class="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
             <ul>
-                <li><a href="#myself">Home</a></li>
+                <li><a href="#myself" class="orangeColor">Home</a></li>
                 <li><a href="#aboutMe">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#myDoing">Portfolio</a></li>
@@ -40,14 +35,12 @@
         <!-- Premiere section presentation du personnage -->
         <section id="myself">
             <div id="myselfDiv">
-                <h3>Hi, Abbas</h3>
-                <h1>Dev Junior</h1>
-                <h3>And I'm a</h3>
+                <span class="salutations">Hi, Abbas</span>
+                <h3>Dev Junior</h3>
+                <span class="salutations">And I'm a</span>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias illo inventore repellat eius
                     tempora animi optio quaerat et dignissimos eveniet maxime, cum iure, possimus eum qui expedita, unde
-                    itaque vel! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis aliquam
-                    debitis, totam ipsa fuga eos harum commodi consectetur, dolorem maiores ipsam aspernatur sint
-                    laborum, eum recusandae! Ratione, nemo eveniet.</p>
+                    itaque vel! Lorem ipsum dolor sit amet, consectetur.</p>
                 <div id="myselfIcons">
                     <i><img src="./images/icons8-facebook-50.png" alt="facebook" class="myselfIcon"></i>
                     <i><img src="./images/icons8-twitter-24.png" alt="twitter" class="myselfIcon"></i>
@@ -57,13 +50,13 @@
                 <a href="#" class="orangeButton">Download CV</a>
             </div>
             <div id="myselfImg">
-                <img src="./images/img_dev_junior.jpg" alt="">
+                <img src="./images/moi.png" alt="">
             </div>
         </section>
         <!-- Deuxieme section About me -->
         <section id="aboutMe">
             <div id="aboutMeDiv">
-                <h1>About Me</h1>
+                <h3>About <span class="orangeColor">Me</span></h3>
                 <h3>Frontend Developer</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias illo inventore repellat eius
                     tempora animi optio quaerat et dignissimos eveniet maxime, cum iure, possimus eum qui expedita, unde
@@ -72,14 +65,14 @@
                     voluptatum veniam molestiae architecto voluptate.</p>
                 <a href="#" class="orangeButton">Read More</a>
             </div>
-            <div id="aboutMeImg"><img src="./images/img_dev_junior.jpg" alt=""></div>
+            <div id="aboutMeImg"><img src="./images/moi.png" alt=""></div>
         </section>
         <!-- Troisieme section, les services offerts -->
         <section id="services">
-            <h1>My <span>Services</span></h1>
+            <h1>My <span class="orangeColor">Services</span></h1>
             <div id="container">
                 <div class="servicesDiv">
-                    <img src="./images/icons8-code-50.png" alt="code">
+                    <img src="images/code.png" alt="code">
                     <h2>Web Development</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
@@ -87,7 +80,7 @@
                     <a href="#" class="orangeButton">Read More</a>
                 </div>
                 <div class="servicesDiv">
-                    <img src="./images/icons8-paint-palette-24.png" alt="paint palette">
+                    <img src="./images/paint_palette.png" alt="paint palette">
                     <h2>UI/UX Designing</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
@@ -95,7 +88,7 @@
                     <a href="#" class="orangeButton">Read More</a>
                 </div>
                 <div class="servicesDiv">
-                    <img src="./images/icons8-android-48.png" alt="android">
+                    <img src="images/android.png" alt="android">
                     <h2>App Development</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aperiam dolore asperiores atque
                         sunt quia delectus enim cupiditate fugit praesentium, reiciendis sit excepturi esse vero
@@ -107,76 +100,75 @@
 
         <!-- Quatrieme section les realisations  -->
         <section id="myDoing">
-            <h2>Latest <span>Projects</span></h2>
-            <section>
-                <div class="myDoingImg myDoingImgTop">
-                    <div class="imgMyDoing">
-                        <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg"
-                            alt="Projects">
-                        <div class="overlay-content">
-                            <h3>Web Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#"></a>
-                        </div>
-                    </div>
-
-                    <div class="imgMyDoing">
-                        <img src="./images/programmeur-professionnel-travaillant-tard-dans-l-obscurite-du-bureau.jpg"
-                            alt="Projects">
-                        <div class="overlay-content">
-                            <h3>Web Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                    <div class="imgMyDoing">
-                        <img src="./images/programmeur-numerisant-l-ecran-de-sa-smartwatch-avec-l-appareil-photo-d-un-smartphone.jpg"
-                            alt="Projects">
-                        <div class="overlay-content">
-                            <h3>Web Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#"></a>
-                        </div>
+            <h1>Latest <span class="orangeColor">Projects</span></h1>
+            <div id="imgMyDoing">
+                <div class="imgMyDoing">
+                    <img src="./images/doing1.png" alt="Projects" class="imageDoing">
+                    <div class="overlay">
+                        <h2>Cloud Architecture</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim aliquam laudantium
+                            a debitis facilis, at aliquid itaque unde dolor suscipit vel! Molestias laborum dolores,
+                            tempore tempora cum distinctio voluptate!</p>
+                        <a href="#"><img src="./images/link.png" alt="link" class="linkImage"></a>
                     </div>
                 </div>
-                <div class="myDoingImg myDoingImgBottom">
-                    <div class="imgMyDoing">
-                        <img src="./images/programmeur-professionnel-travaillant-tard-dans-l-obscurite-du-bureau.jpg"
-                            alt="Projects">
-                        <div class="overlay-content">
-                            <h3>Web Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                    <div class="imgMyDoing">
-                        <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg"
-                            alt="Projects">
-                        <div class="overlay-content">
-                            <h3>Web Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                    <div class="imgMyDoing">
-                        <img src="./images/un-travailleur-informatique-joyeux-utilisant-un-ordinateur-dans-un-lieu-de-travail-innovant-de-la-silicon-valley.jpg"
-                            alt="Projects">
-                        <div class="overlay-content">
-                            <h3>Web Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#"></a>
-                        </div>
-                    </div>
 
-
-
+                <div class="imgMyDoing">
+                    <img src="./images/doing2.png" alt="Projects" class="imageDoing">
+                    <div class="overlay">
+                        <h2>Digital Marketing</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, in ullam officiis dolor
+                            mollitia a amet nisi natus exercitationem doloribus, eligendi facilis ea ipsam
+                            reprehenderit porro quisquam ipsum consequuntur iusto.</p>
+                        <a href="#"><img src="./images/link.png" alt="link" class="linkImage"></a>
+                    </div>
                 </div>
-            </section>
+                <div class="imgMyDoing">
+                    <img src="./images/doing3.png" alt="Projects" class="imageDoing">
+                    <div class="overlay">
+                        <h2>Cloud Computing</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum debitis voluptatem
+                            reiciendis labore tempora quae harum sequi aspernatur, minus repellendus nemo quos
+                            corrupti omnis at, sed, maxime doloremque vel?</p>
+                        <a href="#"><img src="./images/link.png" alt="link" class="linkImage"></a>
+                    </div>
+                </div>
+                <div class="imgMyDoing">
+                    <img src="./images/doing4.png" alt="Projects" class="imageDoing">
+                    <div class="overlay">
+                        <h2>Database</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores corrupti quasi
+                            assumenda sapiente consequatur minus ullam iusto harum dignissimos, reiciendis nam totam
+                            doloribus, nostrum, eum quis dolore. Incidunt, ut nam.</p>
+                        <a href="#"><img src="./images/link.png" alt="link" class="linkImage"></a>
+                    </div>
+                </div>
+                <div class="imgMyDoing">
+                    <img src="./images/doing5.png" alt="Projects" class="imageDoing">
+                    <div class="overlay">
+                        <h2>Business Analytics</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quos facere, blanditiis
+                            tenetur odio beatae nulla nostrum possimus dicta repellat. Quis architecto nisi eius
+                            deleniti. Vitae aliquam ab possimus mollitia.</p>
+                        <a href="#"><img src="./images/link.png" alt="link" class="linkImage"></a>
+                    </div>
+                </div>
+                <div class="imgMyDoing">
+                    <img src="./images/doing6.png" alt="Projects" class="imageDoing">
+                    <div class="overlay">
+                        <h2>Networking</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sapiente, nesciunt
+                            temporibus quae hic commodi culpa inventore asperiores est soluta illum reiciendis.
+                            Atque quas beatae eos odio, aliquid est ex.</p>
+                        <a href="#"><img src="./images/link.png" alt="link" class="linkImage"></a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Cinquieme section Contacts -->
         <section id="contact">
-            <h2>Contact <span>Me!</span></h2>
+            <h1>Contact <span class="orangeColor">Me!</span></h1>
             <section id="contactSection">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.8901813882417!2d2.2737297763135507!3d13.232207887107592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11d0170febd4fb01%3A0x82f4b27e584aec05!2sCODELOCCOL!5e0!3m2!1sfr!2sne!4v1761852016997!5m2!1sfr!2sne"
@@ -203,7 +195,7 @@
     </main>
     <!-- Footer du portfolio -->
     <footer id="pageFooter">
-        <p>Copyright</p>
+        <p>Copyright © 2025 by Aladin | all right reserved</p>
         <a href="#"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
 </body>
