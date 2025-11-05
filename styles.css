@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: solid; */
     list-style: none;
     text-decoration: none;
 }
@@ -52,7 +51,7 @@ body {
     font-weight: 700;
     text-align: center;
     border-radius: 1.5rem;
-    box-shadow: 0 0 3px 3px var(--main-color);
+    box-shadow: 0 0 5px 5px var(--main-color);
     transition: all 1.2s ease;
 }
 
@@ -124,7 +123,7 @@ header nav {
 }
 
 #logo {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
 /* Style de la bare de navigation du header */
@@ -335,6 +334,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 80rem;
     width: 100%;
     flex-wrap: wrap;
     gap: 1rem;
@@ -564,7 +564,4 @@ footer i {
         display: block;
     }
 
-    #menu-toggle:checked~ ul {
-        display: block;
-    }
 }
